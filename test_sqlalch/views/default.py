@@ -10,7 +10,7 @@ from .. import models
 def my_view(request):
     try:
         query = request.dbsession.query(models.MyModel)
-        one = query.filter(models.MyModel.name == 'two').first()
+        one = query.filter(models.MyModel.name == 'three').first()
     except DBAPIError:
         return Response(db_err_msg, content_type='text/plain', status=500)
     return {'one': one, 'project': 'test-sqlalch'}
