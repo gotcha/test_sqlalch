@@ -1,0 +1,3 @@
+[run]
+source = test_sqlalch
+omit = test_sqlalch/test*
